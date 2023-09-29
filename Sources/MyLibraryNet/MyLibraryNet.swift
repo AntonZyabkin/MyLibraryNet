@@ -6,7 +6,7 @@ public protocol NetworkServicerPotocol {
 
 public final class NetworkServiceByURLSession {
 	private let decoderService: DecoderServicable
-	init(decoderService: DecoderServicable) {
+	public init(decoderService: DecoderServicable) {
 		self.decoderService = decoderService
 	}
 }
@@ -41,6 +41,7 @@ public protocol DecoderServicable{
 }
 
 public final class DecoderService{
+	public init() {}
 	private let jsonDecoder = JSONDecoder()
 	private let jsonEncoder = JSONEncoder()
 }
